@@ -33,4 +33,12 @@ class UserController < ApplicationController
       success: success
     }.to_json
   end 
+
+  get '/logout' do 
+    session[:logged_in] = false
+    session[:username] = nil
+    session[:user_id] = nil
+    session[:message] = "You are now logged out"
+  end 
+  
 end 
