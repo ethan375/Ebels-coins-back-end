@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
     response.headers["Access-Control-Allow-Headers"] ="X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept"
   end 
 
-
+  enable :sessions
 
 
   get '/' do 

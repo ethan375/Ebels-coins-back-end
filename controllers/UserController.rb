@@ -3,6 +3,9 @@ class UserController < ApplicationController
   post '/register' do 
     payload_body = request.body.read
     payload = JSON.parse(payload_body).symbolize_keys
+    # puts'---------------------------'
+    # puts payload_body
+    # puts '-------------------------'
     @user = User.new
     @user.username = payload[:username]
     @user.password = payload[:password]

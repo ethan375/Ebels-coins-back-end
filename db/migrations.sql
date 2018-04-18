@@ -14,7 +14,7 @@ CREATE TABLE coins(
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   username VARCHAR(255),
-  password VARCHAR(60)
+  password_digest VARCHAR(60)
 );
 
 CREATE TABLE comments(
